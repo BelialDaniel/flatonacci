@@ -13,3 +13,13 @@ curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poet
 ```
 
 ## Init poetry
+
+```
+task poetry
+```
+
+## Run tests
+
+```
+task tests
+```

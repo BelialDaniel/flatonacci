@@ -4,6 +4,12 @@ tasks:
   poetry:
     desc: Init poetry
     cmds:
-      - poetri init
+      - poetry init
       - poetry shell
       - poetry add pytest
+      - poetry install
+
+  tests:
+    cmds:
+      - poetry shell
+      - poetry run pytest
