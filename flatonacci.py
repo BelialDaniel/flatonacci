@@ -28,6 +28,13 @@ def sum(first, second) -> int:
     return first + second
 
 def flatonacci(signature: list, n: int) -> list:
+    if len(signature) < 3:
+        raise Exception("Signature contains less than 3 items")
+    
+    if n == 0:
+        return list()
+    
+    n = abs(n)
     signature.append(reduce(sum, signature[-3:]))
     if len(signature) < n:
         flatonacci(signature, n)
