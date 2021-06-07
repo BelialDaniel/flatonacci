@@ -21,8 +21,15 @@ clearly specified ;)
 
 Note. Please note that we are gonna test the funcion against a lot of different signatures and n's
 """
+from functools import reduce
 
+
+def sum(first, second) -> int:
+    return first + second
 
 def flatonacci(signature: list, n: int) -> list:
-    # happy coding
-    pass
+    signature.append(reduce(sum, signature[-3:]))
+    if len(signature) < n:
+        flatonacci(signature, n)
+    return signature
+

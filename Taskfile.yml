@@ -1,0 +1,9 @@
+version: "3"
+
+tasks:
+  poetry:
+    desc: Init poetry
+    cmds:
+      - poetri init
+      - poetry shell
+      - poetry add pytest
